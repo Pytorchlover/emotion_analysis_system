@@ -1,0 +1,14 @@
+torch
+pandas
+numpy
+transformers
+scikit-learn
+lxml
+uvicorn
+pydantic
+jieba
+gensim
+python-multipart
+pyqt5-tools
+pyecharts
+PyQtWebEngine
