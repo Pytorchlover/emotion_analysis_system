@@ -1,6 +1,6 @@
 import sys
 
-from new_main import First_Form
+from main import First_Form
 from PyQt5.QtWidgets import QMainWindow, QApplication
 
 
