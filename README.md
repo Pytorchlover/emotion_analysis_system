@@ -369,6 +369,21 @@ python train_model.py
 3. **市场调研**：了解用户对产品或服务的情感态度
 4. **学术研究**：中文情感分析研究和教学
 
+
+### 常见数据集资源
+
+1. **微博情感数据集**: 
+   - 微博情感分析100k: https://github.com/SophonPlus/ChineseNlpCorpus
+   - 包含10万条标注数据
+
+2. **电商评论数据集**:
+   - 京东购物评论: https://github.com/InsaneLife/ChineseNLPCorpus
+   - 包含20万条评论数据
+
+3. **自定义数据收集**:
+   - 使用爬虫收集微博特定话题的评论
+   - 人工标注或使用现有模型进行初步标注
+
 ## 📄 许可证
 
 本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
