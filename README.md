@@ -36,6 +36,7 @@ emotion_analysis_system/
 ├── viwe.py                   # 可视化模块
 ├── all_Thread.py             # 多线程处理
 ├── topic.py                  # 主题分析
+├── use.py                    # 项目启动文件
 └── requirements.txt          # 依赖包列表
 ```
 
@@ -66,11 +67,49 @@ emotion_analysis_system/
 
 ## 🚀 使用方法
 
+### 模型训练详细指南
+
+由于GitHub文件大小限制，预训练模型权重无法上传，请按以下完整步骤训练自己的模型：
+
+### 步骤1：下载BERT预训练模型
+
+#### 方式一：使用transformers自动下载（推荐）
+```python
+from transformers import BertTokenizer, BertModel
+
+# 自动下载并缓存到本地
+tokenizer = BertTokenizer.from_pretrained('bert-base-chinese')
+model = BertModel.from_pretrained('bert-base-chinese')
+
+# 查看下载路径
+print(tokenizer.name_or_path)  # 通常会在 ~/.cache/huggingface/hub 目录
+```
+
+#### 方式二：从魔搭社区下载（国内推荐）
+```python
+# 安装modelscope
+pip install modelscope
+
+# 下载模型
+from modelscope import snapshot_download
+model_dir = snapshot_download('bert-base-chinese', cache_dir='./bert-base-chinese')
+print(f"模型下载到: {model_dir}")
+```
+
+#### 方式三：手动下载（网络受限时）
+1. 访问 HuggingFace: https://huggingface.co/bert-base-chinese
+2. 或访问 魔搭社区: https://modelscope.cn/models/bert-base-chinese
+3. 下载以下必需文件到 `bert-base-chinese/` 目录：
+   - config.json (配置文件)
+   - pytorch_model.bin 或 model.safetensors (模型权重)
+   - vocab.txt (词汇表)
+   - tokenizer_config.json (分词器配置)
+
 ### 📱 图形界面使用流程
 
 #### 1. 启动应用程序
 ```bash
-python main.py
+python use.py
 ```
 
 #### 2. 完整使用流程
